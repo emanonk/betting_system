@@ -1,12 +1,40 @@
 package com.emanon.application.service.jsonWriters;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.springframework.stereotype.Service;
+import com.emanon.application.domain.Country;
+
 /**
  * Created by mmkamm on 13/05/2018.
  */
+@Service
 public class JsonWriter {
 
-    public void write() {
+    public void createCountryJson(Country newCountry, String dataOutputFolder) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
 
+        try {
+            mapper.writeValue(new File(dataOutputFolder+"/"+newCountry.getCountryName()+".json"), newCountry);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void createJson(Object thisObj, String absolutePath) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+            mapper.writeValue(new File(absolutePath+".json"), thisObj);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+//    public void write() {
+//
 //        ObjectMapper mapper = new ObjectMapper();
 //
 //        //For testing
@@ -32,11 +60,11 @@ public class JsonWriter {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
-    }
-
-    public void read() {
-
+//
+//    }
+//
+//    public void read() {
+//
 //        ObjectMapper mapper = new ObjectMapper();
 //
 //        try {
@@ -57,8 +85,8 @@ public class JsonWriter {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
-    }
+//
+//    }
 
 
 

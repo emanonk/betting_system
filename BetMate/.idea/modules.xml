@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BetMate.iml" filepath="$PROJECT_DIR$/BetMate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/betmate.iml" filepath="$PROJECT_DIR$/betmate.iml" />
     </modules>
   </component>
 </project>

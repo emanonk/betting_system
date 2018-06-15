@@ -29,21 +29,24 @@ public class FolderStructureService {
 
     public void initialiseOutputFolders() {
 
-        LOG.info("Creating application folders.");
+        LOG.info("Checking application folders if exist");
 
         File main = new File(outputFolder);
         if (!main.exists()) {
+            LOG.info("mkdir:"+main.getName());
             main.mkdir();
         }
 
         File data = new File(dataFolder);
         if (!data.exists()) {
+            LOG.info("mkdir:"+data.getName());
             data.mkdir();
         }
 
-        File temptickets = new File(exportedFolder);
-        if (!temptickets.exists()) {
-            temptickets.mkdir();
+        File exportedFiles = new File(exportedFolder);
+        if (!exportedFiles.exists()) {
+            LOG.info("mkdir:"+exportedFiles.getName());
+            exportedFiles.mkdir();
         }
 
     }

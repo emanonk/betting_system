@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="BetMate" />
+        <module name="betmate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="BetMate" target="1.8" />
+      <module name="betmate" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
